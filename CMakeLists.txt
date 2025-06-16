@@ -15,11 +15,11 @@ SET(NOCH_SOURCES
     sources/io.cpp
 )
 
-find_package(Boost REQUIRED)
+find_package(Boost REQUIRED COMPONENTS headers)
 
 add_library(noch-lib SHARED ${NOCH_SOURCES})
 target_include_directories(noch-lib PUBLIC ${NOCH_INCLUDE_DIRS})
-target_link_libraries(noch-lib PRIVATE ${Boost_LIBRARIES})
+target_link_libraries(noch-lib PRIVATE Boost::boost)
 
 install(DIRECTORY ${NOCH_INCLUDE_DIRS} DESTINATION include)
 
