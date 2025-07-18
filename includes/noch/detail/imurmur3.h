@@ -2,6 +2,7 @@
 #define NCH_ALGORITHMS_DETAIL_IMURMUR3_H
 
 #include <cstdint>
+#include <cstddef>
 
 namespace noch{
 namespace algorithms{

@@ -2,7 +2,6 @@
 #include <cstdint>
 #include <vector>
 #include <type_traits>
-#include <boost/crc.hpp>
 #include <noch/hash.h>
 #include <noch/algorithms.h>
 
