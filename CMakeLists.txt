@@ -38,7 +38,12 @@ add_library(noch-lib SHARED ${NOCH_SOURCES})
 target_include_directories(noch-lib PUBLIC ${NOCH_INCLUDE_DIRS})
 target_link_libraries(noch-lib PUBLIC Boost::crc)
 
+if (MSVC)
+  set_target_properties(noch-lib PROPERTIES WINDOWS_EXPORT_ALL_SYMBOLS ON)
+endif()
+
 install(DIRECTORY ${NOCH_INCLUDE_DIRS} DESTINATION include)
+
 
 add_subdirectory(examples)
 
